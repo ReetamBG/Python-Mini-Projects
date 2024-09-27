@@ -39,6 +39,7 @@ while lives:
 	if guess == n:
 		print('*' * 20)
 		print('Yayy you won!!')
+		# if guess is correct break out of loop and end 
 		break;
 	elif guess > n:
 		print('*' * 20)
@@ -46,7 +47,8 @@ while lives:
 	elif guess < n:
 		print('*' * 20)
 		print('Oops too low, maybe try higher')
-		
+
+	# decrement lives after incorrect guess
 	lives -= 1;
 
 if lives == 0:
