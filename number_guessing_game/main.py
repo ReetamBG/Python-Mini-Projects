@@ -2,17 +2,21 @@ import random
 
 print('Enter the range of numbers')
 
-while(1):
+while True:
 	try:
-		range = int(input('Low : ')), int(input('High : '))
-		break
-	except:
+		num_range = int(input('Low : ')), int(input('High : '))
+		if num_range[0] > num_range[1]:
+			print('Low cannot be greater than High')
+			continue
+		# break out if no error(in try-except) as well as high > low
+		break    
+	except ValueError:
 		print('Enter a valid number')
 
-n = random.randint(range[0], range[1])
+n = random.randint(num_range[0], num_range[1])
 lives = 3
 
-while(lives):
+while lives:
 	print('*' * 20)
 	print(f'Lives Remaining : {lives}')
 	
