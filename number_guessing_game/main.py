@@ -40,6 +40,13 @@ while lives:
 		print('*' * 20)
 		print('Yayy you won!!')
 		break;
+	elif guess > n:
+		print('*' * 20)
+		print('Oops too high, maybe try lower')
+	elif guess < n:
+		print('*' * 20)
+		print('Oops too low, maybe try higher')
+		
 	lives -= 1;
 
 if lives == 0:
